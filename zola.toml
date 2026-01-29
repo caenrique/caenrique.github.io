@@ -7,6 +7,9 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
+
 [markdown]
 
 [markdown.highlighting]
@@ -14,3 +17,15 @@ theme = "catppuccin-mocha"
 
 [extra]
 # Put all your custom variables here
+
+# Config settings for theme apollo
+#
+# See this for more options:
+# https://github.com/not-matthias/apollo/blob/main/config.toml#L14
+theme = "auto"
+socials = [
+  # Configure socials here
+]
+menu = [
+  # Configure menu bar here
+]
