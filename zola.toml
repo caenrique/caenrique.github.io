@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://cesar.enrique.github.io"
+base_url = "https://caenrique.github.io"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -7,13 +7,23 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-theme = "apollo"
+# theme = "apollo"
 taxonomies = [{ name = "tags" }]
+title = "Cesar Enrique"
+
+[search]
+include_title = true
+include_description = true
+include_path = true
+include_content = true
+index_format = "elasticlunr_json"
 
 [markdown]
 
 [markdown.highlighting]
-theme = "catppuccin-mocha"
+light_theme = "catppuccin-latte"
+dark_theme = "catppuccin-mocha"
+# style = "class"
 
 [extra]
 # Put all your custom variables here
@@ -22,10 +32,17 @@ theme = "catppuccin-mocha"
 #
 # See this for more options:
 # https://github.com/not-matthias/apollo/blob/main/config.toml#L14
-theme = "auto"
 socials = [
-  # Configure socials here
+  { name = "github", url = "https://github.com/caenrique/", icon = "github" },
 ]
 menu = [
-  # Configure menu bar here
+  { name = "/posts", url = "/posts", weight = 1 },
+  { name = "/talks", url = "/talks", weight = 2 },
+  # { name = "/projects", url = "/projects", weight = 2 },
+  { name = "/about", url = "/about", weight = 3 },
+  # { name = "/tags", url = "/tags", weight = 4 },
 ]
+mathjax_dollar_inline_enable = true
+mathjax = true
+toc = true
+fancy_code = true
