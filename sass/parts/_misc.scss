@@ -138,6 +138,20 @@ time {
 
 }
 
+.pagination {
+  width: 100%;
+
+  color: var(--text-2);
+
+  .pagination-prev {
+    float: left;
+  }
+
+  .pagination-next {
+    float: right;
+  }
+}
+
 // change the line-through color
 del {
   text-decoration-color: var(--primary-color);

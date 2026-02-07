@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% macro content(page) %}
+{% block main_content %}
     <div class="visible-element-observer-root" data-selector="main article p">
         <main>
             <article>
@@ -85,11 +85,20 @@
             </article>
         </main>
     </div>
-{% endmacro content %}
 
+    <div class="pagination">
+        {% if page.higher %}
+            <span class="pagination-prev">
+                <a href={{ page.higher.permalink }} aria-label="Previous"><span aria-hidden="true">← Prev</span></a>
+            </span>
+        {% endif %}
 
-{% block main_content %}
-    {{ self::content(page=page) }}
+        {% if page.lower %}
+            <span class="pagination-next">
+                <a href={{ page.lower.permalink }} aria-label="Next"><span aria-hidden="true">Next →</span></a>
+            </span>
+        {% endif %}
+    </div>
 {% endblock main_content %}
 
 {% block right_content %}

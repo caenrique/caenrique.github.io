@@ -20,6 +20,6 @@ template = "homepage.html"
 </style>
 
 <div class="homepage-hero">
-    <h1 class="homepage-hero-title">A lazy Software Engineer's blog</h1>
+    <h1 class="homepage-hero-title">A Lazy Software Engineer's Blog</h1>
     <p class="homepage-hero-subtitle">Functional programming and side effects of being a software engineer</p>
 </div>
