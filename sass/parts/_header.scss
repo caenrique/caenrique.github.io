@@ -1,5 +1,5 @@
 .page-header {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   line-height: 100%;
   font-family: var(--header-font);
   margin: 4rem 0px 1rem 0px;
@@ -102,12 +102,10 @@ nav {
 /* TODO: Is this still used? */
 .meta {
   color: #999;
-  display: flexbox;
-  /* This changes the meta class to use flexbox, which ensures inline display */
+  display: flex;
+  gap: 0.5ch;
   align-items: center;
-  /* Aligns items vertically in the middle */
   flex-wrap: wrap;
-  /* Allows items to wrap as needed */
 }
 
 h1,
@@ -117,7 +115,8 @@ h4,
 h5,
 h6 {
   font-family: monospace var(--header-font);
-  margin-top: 2em;
+  margin-top: 2rem;
+  text-wrap: balance;
 }
 
 h1 {

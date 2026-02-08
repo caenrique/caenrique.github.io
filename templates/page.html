@@ -10,20 +10,20 @@
 
                     <div class="meta">
                         {% if page.date %}
-                            Posted on <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+                            <span>Posted on <time>{{ page.date | date(format="%Y-%m-%d") }}</time></span>
                         {% endif %}
 
 
                         {% if page.updated %}
-                            :: Updated on <time>{{ page.updated | date(format="%Y-%m-%d") }}</time>
+                            <span>| Updated on <time>{{ page.updated | date(format="%Y-%m-%d") }}</time></span>
                         {% endif %}
 
                         {% if page.extra.read_time %}
-                            :: <time>{{ page.reading_time }}</time> Min Read
+                            <span>| <time>{{ page.reading_time }}</time> Min Read</span>
                         {% endif %}
 
                         {% if config.extra.word_count and page.word_count %}
-                            :: {{ page.word_count }} Words
+                            <span>| {{ page.word_count }} Words</span>
                         {% endif %}
 
                         {# View the page on GitHub #}
@@ -39,14 +39,14 @@
 
                             {% if repo_url %}
                                 {% set final_url = repo_url ~ page.relative_path %}
-                                :: <a href="{{ final_url }}" target="_blank" rel="noopener noreferrer">Source Code</a>
+                                <span>| <a href="{{ final_url }}" target="_blank" rel="noopener noreferrer">Source Code</a></span>
                             {% endif %}
                         {% endif %}
 
                         {# Inline display of authors directly after the date #}
                         {% if page.taxonomies and page.taxonomies.authors %}
-                            <span class="authors-label">::</span>
-                            <span class="authors">
+                            <!-- <span class="authors-label">::</span> -->
+                            <span class="authors">|
                                 {%- for author in page.taxonomies.authors %}
                                     <a href="{{ get_taxonomy_url(kind='authors', name=author, lang=page.lang) }}"
                                        class="post-authors">{{ author }}</a>
@@ -56,8 +56,8 @@
 
                         {# Inline display of tags directly after the authors #}
                         {% if page.taxonomies and page.taxonomies.tags %}
-                            <span class="tags-label">::</span>
-                            <span class="tags">
+                            <!-- <span class="tags-label">::</span> -->
+                            <span class="tags">|
                                 {%- for tag in page.taxonomies.tags %}
                                     <a href="{{ get_taxonomy_url(kind='tags', name=tag, lang=page.lang) }}"
                                        class="post-tag">{{ tag }}</a>

@@ -128,8 +128,9 @@ $language-colors: (
 @mixin base-label-style($bg-color, $text-color: var(--label-color)) {
   background: $bg-color;
   color: $text-color;
+  opacity: 0.8;
   border-radius: 0 0 0.25rem 0.25rem;
-  font-size: 12px;
+  font-size: 0.5rem;
   letter-spacing: 0.025rem;
   padding: 0.1rem 0.5rem;
   text-align: right;
@@ -153,7 +154,7 @@ $language-colors: (
 
 code {
   background-color: var(--bg-primary);
-  padding: 0.1em 0.2em;
+  padding: 0.1rem 0.2rem;
   border-radius: 5px;
   border: 1px solid var(--border-color);
   font-family: var(--code-font);
@@ -167,7 +168,7 @@ code {
 .giallo-ln {
     display: inline-block;
     user-select: none;
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
     // padding: 0.4em;
     min-width: 1ch;
     text-align: right;
@@ -178,15 +179,15 @@ pre {
   background-color: var(--bg-primary) !important;
   border-radius: 5px;
   border: 1px solid var(--border-color);
-  line-height: 1.4;
+  // line-height: 1lh;
   overflow-x: auto;
-  padding: 1em;
   position: relative;
 
+  display: grid;
+  grid-template-columns: 1fr 2em;
+
   mark {
-    background-color: var(
-      --highlight-color
-    ) !important; // Ensure mark uses the theme background
+    background-color: var(--highlight-color) !important; // Ensure mark uses the theme background
     padding: 0;
     border-radius: 0px;
   }
@@ -194,57 +195,34 @@ pre {
   code {
     background-color: transparent !important;
     color: var(--text-color);
-    font-size: 100%;
-    padding: 0;
+    padding: 0.8rem;
     border: none;
     font-family: var(--code-font);
+    overflow: auto;
+    // white-space: nowrap;
+  }
 
-    table {
-      margin: 0;
-      border-collapse: collapse;
-      font-family: var(--code-font);
+  .clipboard-button-div {
+    display: flex;
+    justify-content: center;
+    align-content: top;
+    height: fit-content;
+    margin-top: 5px;
 
-      mark {
-        display: block;
-        color: unset;
-        padding: 0;
-        background-color: var(--highlight-color) !important;
-        filter: brightness(1.2); // Example to slightly increase brightness
-      }
-    }
+    // margin: auto;
+  }
 
-    td,
-    th,
-    tr {
-      padding: 0;
-      border-bottom: none;
-      border: none; // Ensure no borders around rows
-    }
-
-    tbody td:first-child {
-      text-align: center;
-      user-select: none;
-      min-width: 60px;
-      border-right: none;
-    }
-
-    tbody tr:nth-child(even),
-    thead tr {
-      background-color: unset;
-    }
-
+  .clipboard-button,
+  .clipboard-button svg {
+    all: unset;
+    cursor: pointer;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    fill: var(--text-color);
+    opacity: 60%;
+    width: 2ch;
+    height: 2ch;
   }
 }
 
-.clipboard-button,
-.clipboard-button svg {
-  all: unset;
-  cursor: pointer;
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  z-index: 10;
-  background-color: transparent;
-  border: none;
-  fill: var(--text-color);
-}
