@@ -28,7 +28,8 @@
         {% for menu in config.extra.menu %}
             <a href={{ get_url(path=menu.url) }} style="margin-right: 0.5em">{{ menu.name }}</a>
         {% endfor %}
-
+    </div>
+    <div class="search-nav">
         {% if config.build_search_index %}
             <button id="search-button"
                     class="search-button"
