@@ -61,6 +61,12 @@ $icon-size: 1.3rem;
       flex: 1;
       padding: 0.75rem 2.5rem;
       font-size: 1rem;
+
+      // Fix for ios zooming on input and messing with the layout
+      @media screen and (-webkit-min-device-pixel-ratio:0) { 
+        font-size: 16px;
+      }
+
       color: var(--text-0);
       background: var(--bg-1);
       border: 1px solid var(--bg-1);
