@@ -130,11 +130,17 @@ h2 {
   font-size: 1.4rem;
 }
 
-h3,
-h4,
+h3,h4 {
+  font-size: 1.2rem;
+}
+
+h5,h6 {
+  font-size: 1.1rem;
+}
+
 h5,
 h6 {
-  font-size: 1.2rem;
+  text-align: center;
 }
 
 h1::before {
@@ -144,25 +150,15 @@ h1::before {
 
 h2::before {
   color: var(--primary-color);
-  content: "## ";
+  content: "# ";
 }
 
 h3::before {
   color: var(--primary-color);
-  content: "### ";
+  content: "## ";
 }
 
 h4::before {
   color: var(--primary-color);
-  content: "#### ";
-}
-
-h5::before {
-  color: var(--primary-color);
-  content: "##### ";
-}
-
-h6::before {
-  color: var(--primary-color);
-  content: "###### ";
+  content: "### ";
 }

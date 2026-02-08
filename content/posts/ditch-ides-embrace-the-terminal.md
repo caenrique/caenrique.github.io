@@ -28,7 +28,7 @@ For that reason, IDEs started to feel frustrating. I eventually switched to usin
 
 If you mostly reach for the terminal only when there’s no GUI alternative, you're leaving a lot of power on the table.
 
-# The terminal is not a relic of the past
+## The terminal is not a relic of the past
 
 For many developers, the terminal is seen as a tool of the past, something you only use when there isn't a graphical alternative available.
 
@@ -41,7 +41,7 @@ The terminal is arguably the best interface we've ever built between humans and 
 
 Let’s break this down.
 
-## The terminal is future-proof
+### The terminal is future-proof
 
 Terminals have existed since the earliest days of computing. While their appearance has evolved, the core interaction
 model has remained remarkably stable.
@@ -58,7 +58,7 @@ workflow that depends on a specific IDE version, plugin ecosystem, or operating 
 
 This is also why most modern development tools (like AI agents) offer a cli first, and maybe some GUI later.
 
-## The terminal is flexible and scriptable
+### The terminal is flexible and scriptable
 
 One of the terminal's biggest strengths is that it acts as an integration layer for other programs.
 
@@ -90,7 +90,7 @@ You don't wait for a plugin. You write a script combining `git`, `fzf` and `tmux
 
 This flips the traditional IDE model on its head. Instead of adapting your workflow to the tool, you adapt the tool to your workflow.
 
-# Can the terminal replace IDEs?
+## Can the terminal replace IDEs?
 
 Before answering that, we need to define what we expect from a modern development environment.
 
@@ -108,19 +108,19 @@ Now the question becomes: can the terminal provide all of this?
 
 The answer is: yes, but with the right setup.
 
-# Building a terminal-based development environment
+## Building a terminal-based development environment
 
 Talking about terminal flexibility is abstract until you see it in action. So instead of listing tools first, let’s look at what a properly configured terminal-based development environment actually *feels* like.
 
 Below is a short demo of a typical workflow: navigating a project, editing code, running tests, inspecting Git state,
 and testing the result locally without leaving the terminal.
 
-# Demo: a day-to-day workflow in the terminal
+## Demo: a day-to-day workflow in the terminal
 
 **Scenario:**  
 You open a project, search for a function, make a change, run tests, inspect a diff, and try it out locally.
 
-## 1. Starting a project session
+### 1. Starting a project session
 
 You open a terminal and start a project-specific session using a terminal multiplexer.
 
@@ -132,7 +132,7 @@ Image suggestion:
 Terminal showing a newly created tmux session with split panes.
 ```
 
-## 2. Navigating and editing code
+### 2. Navigating and editing code
 
 In one pane, you open the editor (Neovim in this case):
 
@@ -153,7 +153,7 @@ Image suggestion:
 Neovim open with a file tree or fuzzy finder, diagnostics visible inline.
 ```
 
-## 3. Searching the codebase
+### 3. Searching the codebase
 
 Need to find where something is defined or used?
 
@@ -170,17 +170,17 @@ Image suggestion:
 Fuzzy search UI showing search results updating in real time.
 ```
 
-## 4. Running tests and builds
+### 4. Running tests and builds
 
 In another pane, you run tests:
 
 ```bash
 sbt test
-# or
+## or
 scala-cli test .
-# or
+## or
 npm test
-# or
+## or
 cargo test
 ```
 
@@ -195,7 +195,7 @@ Split-pane view showing test output on the right and source code on the left.
 This can be done in a plethora of different ways. So you have the flexibility to keep it as simple and basic as
 possible, or hide all the complexity that you want.
 
-## 5. Inspecting Git state
+### 5. Inspecting Git state
 
 To understand what changed, you use git in the terminal:
 
@@ -218,7 +218,7 @@ Image suggestion:
 Git diff view inside the terminal, with added/removed lines highlighted.
 ```
 
-## 6. Testing the functionality
+### 6. Testing the functionality
 
 Finaly, if you need to manually test your api locally, you can use an http client like curl
 
@@ -233,11 +233,11 @@ Image suggestion:
 Show kulala nvim making a request and receiving a response
 ```
 
-# Breaking down the setup
+## Breaking down the setup
 
 Now that you've seen the workflow, let’s talk about the pieces that make it work.
 
-## Core building blocks
+### Core building blocks
 
 Pick one tool from each category:
 
@@ -247,7 +247,7 @@ Pick one tool from each category:
 
 Each choice is independent. You can replace any one of them without rethinking your entire environment.
 
-## Composing your environment
+### Composing your environment
 
 From there, you layer in specialized tools. In my case I use neovim, so the following tools will be mostly neovim
 plugins:
@@ -266,7 +266,7 @@ The terminal-based environment doesn't win by having more features. It wins by g
 
 Once you invest the time to build your terminal environment and experience a workflow like this, the terminal stops feeling like a downgrade and starts feeling like an operating system for development.
 
-# What would you miss?
+## What would you miss?
 
 So here’s the real question:
 
