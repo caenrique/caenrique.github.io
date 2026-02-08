@@ -17,6 +17,7 @@ const changeIcon = (button, isSuccess) => {
 };
 
 // Function to get text from code blocks
+// FIXME: don't copy line numbers
 const getCode = (codeBlock) => {
   return codeBlock.textContent.trim();
 };
